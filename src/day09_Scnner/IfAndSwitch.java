@@ -1,0 +1,32 @@
+package day09_Scnner;
+
+public class IfAndSwitch {
+
+    public static void main(String[] args) {
+
+        int number =50;
+
+        if(number==50|| number==75|| number==100);
+
+        switch(50){
+            case 50:
+                System.out.println( "20 crew, 30 passengers");
+                break;
+            case 75:
+                System.out.println( "25 crew, 50 passengers");
+                break;
+
+            default:
+                System.out.println( "30crew, 70 passengers");
+                    break;
+
+        }
+
+
+
+
+
+    }
+
+
+}

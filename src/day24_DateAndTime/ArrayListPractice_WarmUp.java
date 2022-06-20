@@ -1,0 +1,85 @@
+package day24_DateAndTime;
+
+
+import day17_Custom_Class_intro.Employee;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ArrayListPractice_WarmUp {
+
+    public static void main(String[] args) {
+
+
+        ArrayList<Employee> employees = new ArrayList<>();
+        employees.addAll(Arrays.asList(new Employee(), new Employee(), new Employee(), new Employee(), new Employee()));
+
+        employees.get(0).setInfo("Josh", 34, 'M', "Java Developer", 100000, "A01");
+        employees.get(1).setInfo("Emily", 40, 'F', "SDET", 90000, "A02");
+        employees.get(2).setInfo("Conor", 38, 'M', "Project Manager", 130000, "A03");
+        employees.get(3).setInfo("Bella", 29, 'F', "Java Developer", 95000, "A04");
+        employees.get(4).setInfo("Jimmy", 54, 'M', "Data Analyst", 105000, "A05");
+
+        for (Employee each : employees) {
+            System.out.println(each);
+        }
+
+        for (Employee each : employees) {
+            System.out.println(each.name+ "  :   " + each.jobTitle);
+        }
+
+            for (Employee each : employees) {
+                if(each.jobTitle.equals("Java Developer")){//if job title of employee is Java Developer
+                    System.out.println(each.name);          //print the name
+                }
+            }
+            double max=employees.get(0).salary;
+            double min = employees.get(0).salary;
+
+        for (Employee each : employees) {
+            if(each.salary>max){
+                max=each.salary;
+            }
+            if(each.salary<min){
+                min= each.salary;
+            }
+
+        } System.out.println("Max" +max);
+        System.out.println("Min" +min);
+
+
+        ArrayList<Employee>femaleEmployees =new ArrayList<>();
+        ArrayList<Employee>maleEmployees =new ArrayList<>();
+        for (Employee each : employees) {
+            if(each.gender=='M'){//if each. gender is male MaleEmployee
+              maleEmployees.add(each); // System.out.println(each);;
+            }else {
+                femaleEmployees.add(each);
+            }
+        }
+        System.out.println("Total number of Female Employee  ;"+ femaleEmployees.size());
+        System.out.println("Total number of male Employee  ;"+ maleEmployees.size());
+
+        employees.removeIf(p -> p.salary>100000);
+        for (Employee each : employees) {
+            System.out.println(each.name+ " "+ each.salary);
+
+        }
+        System.out.println(employees);
+
+        }
+
+    }
+
+
+/*   1.1 Write a program that can display the name and job title of each employee
+
+        1.2 Write a program that can display the names of "Java Developers"
+
+        1.3 Write a progam that can display the maximum and minimum salary
+
+        1.4 Create two arraylists named femaleEmployees and maleEmployees,
+         write a program that can add all the female
+        employees and male emloyees to the femaleEmployees and
+        maleEmployees arraylists
+* */
