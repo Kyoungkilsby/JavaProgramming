@@ -61,7 +61,7 @@ public class TestObjects {
 
         StudentsGroup[]group4=new StudentsGroup("Moon",4);
         Student[]students4 =
-        group4.
+        group4.dfhffdf
 
 
 
